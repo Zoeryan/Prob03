@@ -25,31 +25,37 @@ public class Prob03
 			}
 		System.out.println(myArray);
 	
-		while(location - countOdd > 1 && location + countEven < myArray.size())
+//		while(location - countOdd > 1 && location + countEven < myArray.size())
+//			{
+//		for(int j = 0; j < length; j++)
+//			{
+//			int num = (int) myArray.get(j);
+//			if(num == 0)
+//				{
+//				location = length / 2;
+//				newArray.add(num , (location));
+//				System.out.println(newArray);
+//				}
+//		
+//			else if(num % 2 == 0)
+//				{
+//				newArray.add(num , (location + countEven));
+//				countEven++;
+//				}
+//			else
+//				{
+//				newArray.add(num , (location - countOdd));
+//				countOdd++;
+//				}
+//			}
+//		System.out.println(newArray);
+//		}
+		for(int i = myArray.size(); i > 0; i--)
 			{
-		for(int j = 0; j < length; j++)
-			{
-			int num = (int) myArray.get(j);
-			if(num == 0)
-				{
-				location = length / 2;
-				newArray.add(num , (location));
-				System.out.println(newArray);
-				}
-		
-			else if(num % 2 == 0)
-				{
-				newArray.add(num , (location + countEven));
-				countEven++;
-				}
-			else
-				{
-				newArray.add(num , (location - countOdd));
-				countOdd++;
-				}
+			int counter = 0;
+			newArray.add((int) myArray.get(i) , (newArray.size() - counter));
+			
 			}
-		System.out.println(newArray);
-		}
 		}
 	}
 }
